@@ -1,6 +1,8 @@
+"use strict"
+
 const list = "";
 const input = "";
 const add = "";
 const clear = "";
 const load = "";
-const tasks = "";
+let tasks = ["Apprendre le C++", "Faire les courses", "Changer une ampoule"];
