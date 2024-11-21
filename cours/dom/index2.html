@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input-jolie {
+        background-color: black;
+        border: 1px solid grey;
+        border-radius: 10px;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input class="coucou" type="text" name="" id="">
+  <a href="#">Cliquez ici</a> -->
+
+    <button>Ajouter une tâche</button>
+    <h1>Mes tâches :</h1>
+
+    <script>
+      // setTimeout(() => {
+      //   const input = document.querySelector("input");
+
+      //   // input.className = "input-jolie"
+      //   input.classList.add("input-jolie")
+
+      //   // input.value = "Coucou les B1 !";
+      //   // input.disabled =true;
+
+      //   // const a = document.querySelector("a");
+      //   // a.href = "http://site-malveillant.fr"
+      // }, 3000)
+
+      // setTimeout(() => {
+      //   const input = document.querySelector("input");
+      //   input.classList.remove("coucou")
+      // }, 5000)
+
+      // let i = 0;
+      // const h1 = document.querySelector("h2");
+
+      // setInterval(() => {
+      //   const elHtml = document.createElement("h2")
+      //   elHtml.innerText = new Date().toLocaleString("fr-FR");
+
+      //   // h2.innerText = new Date().toLocaleString("fr-FR");
+
+      //   document.body.append(elHtml);
+
+      //   const h2List = document.querySelectorAll("h2")
+      //   h2List.forEach(h2 => {
+      //     h2.innerText = new Date().toLocaleString("fr-FR");
+      //   })
+
+      // }, 1)
+
+      let i = 0;
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        i++;
+        const p = document.createElement("p");
+        p.innerText = `Tâche n°${i}`;
+        document.body.append(p);
+      });
+    </script>
+  </body>
+</html>
