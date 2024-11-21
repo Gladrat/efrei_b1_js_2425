@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        background-color: none;
+        color: black;
+        transform: none;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titre-principal">Hello world !</h1>
+
+
+    <h2 class="titre-secondaire">Titre 2</h2>
+    <h2 class="titre-secondaire">Titre 2</h2>
+    <h2 class="titre-secondaire">Titre 2</h2>
+    <h2 class="titre-secondaire">Titre 2</h2>
+    <h2 class="titre-secondaire">Titre 2</h2>
+
+    <script>
+      setTimeout(() => {
+        document.body.style.backgroundColor = "darksalmon";
+
+        // const titreH1 = document.getElementById("titre-principal");
+        
+        // const titreH1 = document.querySelector("h1");
+        const titreH1 = document.querySelector("#titre-principal");
+
+        // ...
+        titreH1.style.backgroundColor = "white";
+        titreH1.style.color = "blue";
+        titreH1.style.transform = "none";
+        titreH1.style.textAlign = "center";
+
+        // const titreH2 = document.querySelector(".titre-secondaire")
+        const titreH2 = document.querySelectorAll(".titre-secondaire")
+
+        for (let i = 0; i < titreH2.length; i++) {
+          if (i % 2 == 0) {
+            const element = titreH2[i];
+            element.style.backgroundColor = "yellow";
+          }
+        }
+
+      }, 2000);
+    </script>
+  </body>
+</html>
