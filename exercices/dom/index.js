@@ -10,11 +10,11 @@ console.log(labelList);
 
 // 3.
 // const firstTD = table.querySelector("td");
-const firstTD = table.rows[0].cells[0]
+const firstTD = table.rows[0].cells[0];
 console.log(firstTD);
 
 // 4.
-const form = document.querySelector("form[name=search]")
+const form = document.querySelector("form[name=search]");
 console.log(form);
 
 // 5.
@@ -23,8 +23,19 @@ console.log(firstInput);
 
 // 6.
 // const lastInput = form.querySelectorAll("input")[form.querySelectorAll("input").length-1];
-const lastInput = form.children[form.children.length-1]
+const lastInput = form.children[form.children.length - 1];
 console.log(lastInput);
 
 // 7.
-table
+console.log(table.children[0].children[0].children[1].children[1]);
+const target = table.children[0].children[0].children[1].children[1];
+console.log(
+  target.parentElement.parentElement.parentElement.parentElement.parentElement
+    .parentElement.children[0].children[0].children[0]
+);
+
+console.log(
+  document.querySelector("table").children[0].children[0].children[1]
+    .children[1].parentElement.parentElement.parentElement.parentElement
+    .parentElement.parentElement.children[0].children[0].children[0]
+);
