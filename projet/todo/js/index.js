@@ -12,6 +12,13 @@ let tasks = [
   "Changer une ampoule",
 ];
 
+function newTask(task) {
+  taskToDOM(task);
+
+  input.value = "";
+  input.focus();
+}
+
 function taskToDOM(task, i) {
   if (task && typeof task === "string") {
     const li = document.createElement("li");
@@ -19,6 +26,10 @@ function taskToDOM(task, i) {
 
     li.textContent = `Tâche n° ${i}: ` + task;
     remove.textContent = "REMOVE";
+
+    remove.addEventListener("click", () => {
+      li.remove()
+    })
 
     li.append(remove);
     list.append(li);
@@ -35,7 +46,16 @@ for (let t of tasks) {
   }
 }
 
-// Gérer les événements
-  // Le bouton "ADD" & son alias (quand l'utilisateur appuie sur "Entrée")
-  // Le bouton "REMOVE"
-  // Le bouton "CLEAR"
+add.addEventListener("click", () => {
+  newTask(input.value);
+})
+
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    newTask(input.value);
+  }
+})
+
+clear.addEventListener("click", () => {
+  list.innerHTML = "";
+})
