@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+  <body>
+    <button id="fr">Date en FR</button>
+    <button id="en">Date en EN</button>
+
+    <script>
+      console.log("Les fonctions !");
+
+      function date_heure(localisation = "fr-FR") {
+        const dh = new Date().toLocaleString(localisation);
+
+        console.log(dh);
+        return dh;
+      }
+
+      // setTimeout(date_heure, 3000)
+
+      // setTimeout(() => {
+      //   const dh = new Date().toLocaleString("fr-FR");
+      //   console.log(dh);
+      // }, 3000)
+
+      // setTimeout(() => date_heure("en-EN"), 1000)
+      // setTimeout(() => date_heure("fr-FR"), 3000)
+
+      // Une fonction qui effectue des opérations
+      // Ces opérations peuvent prendre un peu/beaucoup/(ou pas du tout) de temps
+      // Quand ce temps est écoulé -> Quand les opérations sont réalisées
+      // Elle "force" l'execution d'une fonction de rappel (callback)
+
+      const buttonFR = document.querySelector("#fr");
+      buttonFR.addEventListener("click", () => date_heure());
+
+      const buttonEN = document.querySelector("#en");
+      buttonEN.addEventListener("click", () => date_heure("en-EN"));
+
+      const b = document.querySelector("button");
+      b.addEventListener("")
+    </script>
+  </body>
+</html>
