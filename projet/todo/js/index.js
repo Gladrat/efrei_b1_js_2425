@@ -13,21 +13,25 @@ let tasks = ["Apprendre le C++", "Faire les courses", "Changer une ampoule"];
   // Elle est appelée au chargement de la page pour chaque tâche du tableau tasks
 
 function taskToDOM(task) {
-  
+  // Ajoute une tâche dans le DOM
 }
 
-let i = 0;
-for (let t of tasks) {
-  if (t && typeof t === "string") {
-    const li = document.createElement("li");
-    const remove = document.createElement("button");
+// Boucle
+  // Parcours le tableau de tasks
+  // Apelle la fonction taskToDOM pour chaque tâche du tableau
 
-    li.textContent = t;
-    remove.textContent = "REMOVE";
+// let i = 0;
+// for (let t of tasks) {
+//   if (t && typeof t === "string") {
+//     const li = document.createElement("li");
+//     const remove = document.createElement("button");
 
-    li.append(remove);
-    list.append(li);
+//     li.textContent = t;
+//     remove.textContent = "REMOVE";
 
-    i++;
-  }
-}
+//     li.append(remove);
+//     list.append(li);
+
+//     i++;
+//   }
+// }
