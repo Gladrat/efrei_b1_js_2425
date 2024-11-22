@@ -8,7 +8,6 @@ const load = document.querySelector("#load");
 
 let tasks = [
   "Apprendre le C++",
-  "",
   "Faire les courses",
   "Changer une ampoule",
 ];
@@ -35,3 +34,8 @@ for (let t of tasks) {
     i++;
   }
 }
+
+// Gérer les événements
+  // Le bouton "ADD" & son alias (quand l'utilisateur appuie sur "Entrée")
+  // Le bouton "REMOVE"
+  // Le bouton "CLEAR"
