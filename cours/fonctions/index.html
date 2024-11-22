@@ -10,8 +10,11 @@
     <button id="fr">Date en FR</button>
     <button id="en">Date en EN</button>
 
+    <h1></h1>
+
     <script>
-      console.log("Les fonctions !");
+      const h1 = document.querySelector("h1");
+      h1.innerText = date_heure();
 
       function date_heure(localisation = "fr-FR") {
         const dh = new Date().toLocaleString(localisation);
@@ -36,13 +39,19 @@
       // Elle "force" l'execution d'une fonction de rappel (callback)
 
       const buttonFR = document.querySelector("#fr");
-      buttonFR.addEventListener("click", () => date_heure());
+      buttonFR.addEventListener("click", () => {
+        h1.innerText = date_heure();
+      });
 
       const buttonEN = document.querySelector("#en");
-      buttonEN.addEventListener("click", () => date_heure("en-EN"));
+      buttonEN.addEventListener("click", () => {
+        h1.innerText = date_heure("en-EN");
+      });
 
-      const b = document.querySelector("button");
-      b.addEventListener("")
+      // let age = prompt("Quel age avez-vous ?", 18);
+
+      // let welcome = age < 18 ? () => alert("mineur") : () => alert("majeur");
+      // welcome();
     </script>
   </body>
 </html>
