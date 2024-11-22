@@ -8,6 +8,14 @@ const load = document.querySelector("#load");
 
 let tasks = ["Apprendre le C++", "Faire les courses", "Changer une ampoule"];
 
+// Objectif : Intégrer le code déjà réalisé dans une fonction
+  // La fonction ajoute une tâche dans le DOM
+  // Elle est appelée au chargement de la page pour chaque tâche du tableau tasks
+
+function taskToDOM(task) {
+  
+}
+
 let i = 0;
 for (let t of tasks) {
   if (t && typeof t === "string") {
