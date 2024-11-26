@@ -1,5 +1,0 @@
-- créer un projet web
-  - complet (html/css -> le css dans un dossier distinct "css")
-- créer deux fichier javascript (dans leurs propre dossier également "js")
-  - ArrayStorage.js
-  - index.js
