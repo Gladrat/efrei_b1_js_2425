@@ -6,12 +6,8 @@ const add = document.querySelector("#add");
 const clear = document.querySelector("#clear");
 const load = document.querySelector("#load");
 
-let tasks = [
-  "Apprendre le C++",
-  "Faire les courses",
-  "Changer une ampoule",
-  ""
-];
+const storage = new ArrayStorage("tasks")
+let tasks = storage.list;
 
 const tasksCount = document.querySelector("#tasks-count");
 updateTaskCount(tasks.length)
@@ -22,6 +18,7 @@ function updateTaskCount(count) {
 
 function newTask(task) {
   taskToDOM(task);
+  storage.set(task)
 
   input.value = "";
   input.focus();
@@ -35,11 +32,13 @@ function taskToDOM(task, i) {
     const li = document.createElement("li");
     const remove = document.createElement("button");
 
-    li.textContent = `Tâche n° ${i}: ` + task;
+    // li.textContent = `Tâche n° ${i}: ` + task;
+    li.textContent = task;
     remove.textContent = "REMOVE";
 
     remove.addEventListener("click", () => {
       li.remove()
+      storage.remove(task)
     })
 
     li.append(remove);
@@ -53,7 +52,7 @@ function taskToDOM(task, i) {
 let i = 1;
 for (let t of tasks) {
   if (taskToDOM(t, i)) {
-    i++;
+    // i++;
   }
 }
 
@@ -71,4 +70,5 @@ input.addEventListener("keydown", (event) => {
 
 clear.addEventListener("click", () => {
   list.innerHTML = "";
+  storage.clear();
 })
