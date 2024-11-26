@@ -10,13 +10,24 @@ let tasks = [
   "Apprendre le C++",
   "Faire les courses",
   "Changer une ampoule",
+  ""
 ];
+
+const tasksCount = document.querySelector("#tasks-count");
+updateTaskCount(tasks.length)
+
+function updateTaskCount(count) {
+  tasksCount.textContent = count;
+}
 
 function newTask(task) {
   taskToDOM(task);
 
   input.value = "";
   input.focus();
+
+  console.log(tasks);
+  
 }
 
 function taskToDOM(task, i) {
@@ -48,11 +59,13 @@ for (let t of tasks) {
 
 add.addEventListener("click", () => {
   newTask(input.value);
+  updateTaskCount(tasks.length)
 })
 
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     newTask(input.value);
+    updateTaskCount(tasks.length)
   }
 })
 
