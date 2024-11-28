@@ -24,7 +24,6 @@ function newTask(task) {
   input.focus();
 
   console.log(tasks);
-  
 }
 
 function taskToDOM(task, i) {
